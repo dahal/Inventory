@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'rails_admin'
+gem 'cancan'
 
 group :doc do
   gem 'sdoc', require: false
