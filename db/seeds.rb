@@ -11,13 +11,12 @@ u = User.new(
 	:password => 'password',
 	:role => 'admin'
 )
-u.save!(validate =>false)
-
+u.save!
 
 u = User.new(
 	:email => 'clerk@email.com',
 	:password => 'password',
 	:role => 'clerk'
 )
-u.save!(validate =>false)
+u.save!
 
