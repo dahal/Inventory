@@ -10,6 +10,22 @@
 
  <p class="notice"><%= notice %></p>
  <p class="alert"><%= alert %></p>
+ <center><strong>
+ 	<%= link_to "Home", root_path%>
+ 	
+	<% if user_signed_in? %>
+	<%= link_to "Inventory", :controller => 'clothes', :action=> 'index'  %>
+	  Logged in as <%= current_user.email %>.
+	  <%= link_to ' Edit profile', edit_user_registration_path %> |
+	  <%= link_to " Logout", destroy_user_session_path, method: :delete %>
+	<% else %>
+	  <%= link_to " Sign up", new_user_registration_path  %> |
+	  <%= link_to " Clerk Login", new_user_session_path  %>
+	  <a href="/admin"> Admin Login</a>
+
+	<% end %>
+</strong></center>
+
 <%= yield %>
 
 </body>
