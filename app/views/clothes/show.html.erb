@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @clothe.item_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @clothe.title %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @clothe.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @clothe.price %>
+</p>
+
+<%= link_to 'Edit', edit_clothe_path(@clothe) %> |
+<%= link_to 'Back', clothes_path %>
